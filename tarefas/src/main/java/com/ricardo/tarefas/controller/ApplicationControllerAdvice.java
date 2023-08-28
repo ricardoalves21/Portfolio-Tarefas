@@ -1,6 +1,6 @@
 package com.ricardo.tarefas.controller;
 
-import com.ricardo.tarefas.exception.RecordNotFoundException;
+import com.ricardo.tarefas.exception.ExcecaoRegistroNaoEncontrado;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ApplicationControllerAdvice {
 
-    @ExceptionHandler(RecordNotFoundException.class)
+    @ExceptionHandler(ExcecaoRegistroNaoEncontrado.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleNotFoundException(RecordNotFoundException ex) {
+    public String excecaoNaoEcontrada(ExcecaoRegistroNaoEncontrado ex) {
         return ex.getMessage();
     }
 }

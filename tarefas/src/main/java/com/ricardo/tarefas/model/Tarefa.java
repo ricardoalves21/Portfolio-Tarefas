@@ -1,6 +1,8 @@
 package com.ricardo.tarefas.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ricardo.tarefas.enums.Etapa;
+import com.ricardo.tarefas.enums.EtapaConverter;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
