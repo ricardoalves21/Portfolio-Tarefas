@@ -1,10 +1,10 @@
 package com.ricardo.tarefas.exception;
 
-public class RecordNotFoundException extends RuntimeException {
+public class ExcecaoRegistroNaoEncontrado extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public RecordNotFoundException(Long id) {
+    public ExcecaoRegistroNaoEncontrado(Long id) {
         super("Registro não encontrado com o id: " + id);
     }
 }
